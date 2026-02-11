@@ -1,0 +1,87 @@
+<!-- dietitians.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dietitians’ Guide • Plant-Based Meal Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="img/logo.svg" alt="Challenge style brand logo" class="brand-logo" />
+        <span class="brand-text">Challenge<span class="accent">22</span></span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="meal-plan.html">Meal Plan</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="dietitians.html" aria-current="page">Dietitians’ Guide</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchOpen" aria-label="Open search">🔍</button>
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button class="chip" data-lang="en" aria-pressed="true">EN</button>
+          <button class="chip" data-lang="hi">HI</button>
+        </div>
+        <a class="btn donate" href="#donate">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Dietitians’ Guide</h2>
+      <p class="section-subtitle">Evidence‑based notes on balanced plant‑based eating.</p>
+
+      <div class="card">
+        <div class="content">
+          <h3>Key nutrients to watch</h3>
+          <p class="muted">Protein, iron, calcium, B12, omega‑3s, iodine, zinc—plus tips to cover them.</p>
+          <ul>
+            <li>Protein: legumes, tofu/tempeh, seitan, soy milk.</li>
+            <li>Iron: lentils, beans, seeds; pair with vitamin C.</li>
+            <li>Calcium: fortified milks, tofu, tahini, greens.</li>
+            <!-- etc. -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+  <div class="content">
+    <h3>Common Beginner Mistakes</h3>
+    <ul>
+      <li>Too little protein</li>
+      <li>Skipping fruits</li>
+      <li>Over-reliance on junk vegan food</li>
+    </ul>
+
+    <h3>Sample Balanced Day</h3>
+    <p>Breakfast: Oats + fruit</p>
+    <p>Lunch: Dal + rice + salad</p>
+    <p>Dinner: Tofu + veggies</p>
+  </div>
+</div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Plant-Based Meal Planner • Built by VIT Lab</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

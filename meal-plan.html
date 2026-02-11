@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mealique Weekly Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="Designer.png" alt="Mealique logo" class="brand-logo" />
+        <span class="brand-text">Mealique</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meal-plan.html" aria-current="page">Meal Plan</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="dietitians.html">Dietitians Guide</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchOpen" aria-label="Open recipe search">Search</button>
+        <a class="btn donate" href="recipes.html">Find Recipes</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-drawer" id="searchDrawer" aria-hidden="true">
+    <div class="search-content container">
+      <input id="searchInput" type="search" placeholder="Search recipes..." aria-label="Search recipes" />
+      <div class="filters">
+        <select id="filterMealType" aria-label="Filter by meal type">
+          <option value="">All meal types</option>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+          <option>Dessert</option>
+        </select>
+        <select id="filterDifficulty" aria-label="Filter by difficulty">
+          <option value="">All difficulty</option>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Advanced</option>
+        </select>
+        <select id="filterDiet" aria-label="Filter by diet">
+          <option value="">Any diet</option>
+          <option>Plant-Based</option>
+          <option>High-Protein</option>
+          <option>Gluten-Free</option>
+        </select>
+        <button id="clearFilters" class="chip">Clear</button>
+        <button id="searchClose" class="chip">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="section alt">
+    <div class="container">
+      <h1 class="section-title">Weekly Meal Planner</h1>
+      <p class="section-subtitle">Drag recipes from your favorites into the planner grid. Your data stays in your browser.</p>
+
+      <div class="planner">
+        <aside class="planner-sidebar">
+          <h3>Your Favorites</h3>
+          <p class="muted">Save recipes from the recipes page, then drag them into the planner.</p>
+          <div id="favoritesList" class="favorites-list"></div>
+          <div class="stack-actions">
+            <button id="clearPlan" class="btn ghost">Clear Plan</button>
+            <button id="exportPlan" class="btn">Export Plan JSON</button>
+          </div>
+        </aside>
+
+        <div class="planner-board" role="table" aria-label="Weekly planner">
+          <div class="planner-header">
+            <div class="cell"></div>
+            <div class="cell">Mon</div>
+            <div class="cell">Tue</div>
+            <div class="cell">Wed</div>
+            <div class="cell">Thu</div>
+            <div class="cell">Fri</div>
+            <div class="cell">Sat</div>
+            <div class="cell">Sun</div>
+          </div>
+          <div class="planner-body">
+            <div class="row" data-meal="Breakfast">
+              <div class="cell row-label">Breakfast</div>
+              <div class="cell droppable" data-day="Mon"></div>
+              <div class="cell droppable" data-day="Tue"></div>
+              <div class="cell droppable" data-day="Wed"></div>
+              <div class="cell droppable" data-day="Thu"></div>
+              <div class="cell droppable" data-day="Fri"></div>
+              <div class="cell droppable" data-day="Sat"></div>
+              <div class="cell droppable" data-day="Sun"></div>
+            </div>
+            <div class="row" data-meal="Lunch">
+              <div class="cell row-label">Lunch</div>
+              <div class="cell droppable" data-day="Mon"></div>
+              <div class="cell droppable" data-day="Tue"></div>
+              <div class="cell droppable" data-day="Wed"></div>
+              <div class="cell droppable" data-day="Thu"></div>
+              <div class="cell droppable" data-day="Fri"></div>
+              <div class="cell droppable" data-day="Sat"></div>
+              <div class="cell droppable" data-day="Sun"></div>
+            </div>
+            <div class="row" data-meal="Dinner">
+              <div class="cell row-label">Dinner</div>
+              <div class="cell droppable" data-day="Mon"></div>
+              <div class="cell droppable" data-day="Tue"></div>
+              <div class="cell droppable" data-day="Wed"></div>
+              <div class="cell droppable" data-day="Thu"></div>
+              <div class="cell droppable" data-day="Fri"></div>
+              <div class="cell droppable" data-day="Sat"></div>
+              <div class="cell droppable" data-day="Sun"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shopping">
+        <h3>Shopping List</h3>
+        <p class="muted">Automatically built from your planned recipes.</p>
+        <ul id="shoppingList" class="shopping-list"></ul>
+        <div class="shopping-actions">
+          <button id="copyShopping" class="btn">Copy</button>
+          <button id="downloadShopping" class="btn">Download TXT</button>
+          <button id="clearShopping" class="btn ghost">Clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright <span id="year"></span> Mealique. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html" aria-current="page">Meal Plan</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

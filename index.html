@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mealique | Smart Meal Planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="Designer.png" alt="Mealique logo" class="brand-logo" />
+        <span class="brand-text">Mealique</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="meal-plan.html">Meal Plan</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="dietitians.html">Dietitians Guide</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="searchOpen" aria-label="Open recipe search">Search</button>
+        <a class="btn donate" href="meal-plan.html">Plan This Week</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-drawer" id="searchDrawer" aria-hidden="true">
+    <div class="search-content container">
+      <input id="searchInput" type="search" placeholder="Search recipes..." aria-label="Search recipes" />
+      <div class="filters">
+        <select id="filterMealType" aria-label="Filter by meal type">
+          <option value="">All meal types</option>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+          <option>Dessert</option>
+        </select>
+        <select id="filterDifficulty" aria-label="Filter by difficulty">
+          <option value="">All difficulty</option>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Advanced</option>
+        </select>
+        <select id="filterDiet" aria-label="Filter by diet">
+          <option value="">Any diet</option>
+          <option>Plant-Based</option>
+          <option>High-Protein</option>
+          <option>Gluten-Free</option>
+        </select>
+        <button id="clearFilters" class="chip">Clear</button>
+        <button id="searchClose" class="chip">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Healthy eating without stress</p>
+        <h1>Plan your meals, save your recipes, and shop smarter.</h1>
+        <p class="lead">
+          Mealique helps you build a practical weekly routine with simple recipes, drag-and-drop planning,
+          and an automatic shopping list.
+        </p>
+        <div class="cta-row">
+          <a href="meal-plan.html" class="btn primary">Open Weekly Planner</a>
+          <a href="recipes.html" class="btn ghost">Explore Recipes</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Fresh healthy meal bowl with greens and vegetables" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2 class="section-title">What you can do on Mealique</h2>
+      <p class="section-subtitle">Everything in one place for weekly meal organization.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Build a weekly plan</h3>
+          <p>Drag favorite recipes into breakfast, lunch, and dinner slots for all 7 days.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Save your favorite recipes</h3>
+          <p>Mark recipes once and quickly reuse them any week from your favorites panel.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Create a shopping list</h3>
+          <p>Generate ingredients from your planned meals and export or copy the list instantly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Popular recipe categories</h2>
+      <p class="section-subtitle">Balanced choices for busy weekdays and relaxed weekends.</p>
+      <div class="card-grid">
+        <article class="card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80" alt="Nutritious breakfast bowl" />
+          </div>
+          <div class="content">
+            <h3>Breakfast Boosters</h3>
+            <p>Smoothies, oats, toasts, and make-ahead bowls to start strong.</p>
+            <a class="btn" href="recipes.html">See Breakfast Ideas</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Healthy lunch salad bowl" />
+          </div>
+          <div class="content">
+            <h3>Lunch in 20 Minutes</h3>
+            <p>Fast wraps, bowls, and salads that are filling and practical for workdays.</p>
+            <a class="btn" href="recipes.html">See Lunch Ideas</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80" alt="Healthy dinner plate with vegetables and grains" />
+          </div>
+          <div class="content">
+            <h3>Simple Family Dinners</h3>
+            <p>Comforting, nutrient-dense dinners with affordable ingredients.</p>
+            <a class="btn" href="recipes.html">See Dinner Ideas</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container split-cta">
+      <div>
+        <h2 class="section-title">Ready to plan your week?</h2>
+        <p class="section-subtitle">Use the drag-and-drop planner and keep your nutrition on track.</p>
+      </div>
+      <a href="meal-plan.html" class="btn primary">Start Meal Planning</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Copyright <span id="year"></span> Mealique. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-plan.html">Meal Plan</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
