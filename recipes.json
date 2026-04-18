@@ -1,0 +1,26 @@
+[
+  {
+    "id": "banana-oats",
+    "title": "Banana Oats",
+    "desc": "Healthy breakfast oats with banana.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvF6HVOAGkFAywJGuyGqnMEz3Ilb7J3f0_dA&s",
+    "ingredients": ["Oats", "Banana", "Milk"],
+    "steps": ["Boil oats", "Add banana", "Serve warm"]
+  },
+  {
+    "id": "veg-dal",
+    "title": "Vegetable Dal",
+    "desc": "Simple Indian dal recipe.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsSfj6AtEn_nFOX3ink98V9wG46GAZZLvLRg&s",
+    "ingredients": ["Lentils", "Onion", "Spices"],
+    "steps": ["Boil dal", "Prepare tadka", "Mix & cook"]
+  },
+  {
+    "id": "veg-salad",
+    "title": "Fresh Veg Salad",
+    "desc": "Light and fresh salad.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4OwioW-uxh12CRIqosVTMWBN_mdHhF1ZnJQ&s",
+    "ingredients": ["Cucumber", "Tomato", "Lettuce"],
+    "steps": ["Chop veggies", "Mix", "Serve"]
+  }
+]
